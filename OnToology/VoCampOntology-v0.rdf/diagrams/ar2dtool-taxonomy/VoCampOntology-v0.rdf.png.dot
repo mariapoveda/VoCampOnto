@@ -1,0 +1,25 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:EnergyConsumption" "time:Instant" "base:Consumption" "base:PVPlant" "base:Temperature" "ssn:FeatureOfInterest" "base:SpatialStructureElement" "base:BuildingEntity" "schema:PostalAddress" "base:EnergyProduction" "base:Building" "ssn:Property" "time:Interval" "base:Cost" "base:Furniture" "base:Production" "ssn:Device" "time:DateTimeInterval" "time:DurationDescription" "time:January" "time:ProperInterval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" ; /*classes style*/
+	"base:Furniture" -> "ssn:Device" [ label = "rdfs:subClassOf" ];
+	"ssn:Device" -> "ssn:FeatureOfInterest" [ label = "rdfs:subClassOf" ];
+	"base:Temperature" -> "ssn:Property" [ label = "rdfs:subClassOf" ];
+	"base:EnergyConsumption" -> "base:Consumption" [ label = "rdfs:subClassOf" ];
+	"base:PVPlant" -> "ssn:Device" [ label = "rdfs:subClassOf" ];
+	"time:DateTimeInterval" -> "time:ProperInterval" [ label = "rdfs:subClassOf" ];
+	"base:BuildingEntity" -> "ssn:FeatureOfInterest" [ label = "rdfs:subClassOf" ];
+	"base:Building" -> "ssn:FeatureOfInterest" [ label = "rdfs:subClassOf" ];
+	"base:Cost" -> "ssn:Property" [ label = "rdfs:subClassOf" ];
+	"time:Year" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
+	"schema:PostalAddress" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:Consumption" -> "ssn:Property" [ label = "rdfs:subClassOf" ];
+	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"base:Production" -> "ssn:Property" [ label = "rdfs:subClassOf" ];
+	"time:January" -> "time:DateTimeDescription" [ label = "rdfs:subClassOf" ];
+	"time:ProperInterval" -> "time:Interval" [ label = "rdfs:subClassOf" ];
+	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"base:SpatialStructureElement" -> "ssn:FeatureOfInterest" [ label = "rdfs:subClassOf" ];
+	"base:EnergyProduction" -> "base:Production" [ label = "rdfs:subClassOf" ];
+
+}
